@@ -8,7 +8,7 @@ const App = () => {
   const [filteredTransactions, setFilteredTransactions] = useState([]);
   const [soldProducts , setSoldProducts ] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedMonth, setSelectedMonth] = useState('3'); // Default to March (value '3')
+  const [selectedMonth, setSelectedMonth] = useState('3'); 
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10; // Number of transactions per page
@@ -17,7 +17,7 @@ const App = () => {
     const fetchTransactions = async () => {
       setLoading(true);
       try {
-        // Example API call to fetch transactions
+       
         const response = await axios.get('http://localhost:2000/transactions');
         setTransactions(response.data);
         filterTransactions(selectedMonth, response.data); // Filter initial transactions
@@ -188,7 +188,7 @@ const App = () => {
             </div>
           </div>
 
-          {/* Chart component */}
+          
           <Chart month={selectedMonth} transactions={soldProducts} />
         </>
       )}
