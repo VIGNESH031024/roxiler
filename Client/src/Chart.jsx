@@ -4,7 +4,7 @@ import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Lege
 import 'chartjs-adapter-date-fns'; // Adapter for Date-fns library
 import './Chart.css';
 
-// Register necessary Chart.js components
+
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const Chart = ({ month, transactions }) => {
